@@ -1,7 +1,6 @@
 <template>
   <div
-    class="particles-js"
-    :id="id"
+    id="particles-js"
     :color="color"
     :particleOpacity="particleOpacity"
     :linesColor="linesColor"
@@ -23,11 +22,6 @@
   /* eslint-disable */
   export default {
     name: 'vue-particles',
-    data: function () {
-      return {
-        id: 'particles-instance-' + Math.floor(Math.random() * 5000)
-      }
-    },
     props: {
       color: {
         type: String,
@@ -131,7 +125,7 @@
         clickEffect,
         clickMode
       ) {
-        particlesJS(this.id, {
+        particlesJS('particles-js', {
           "particles": {
             "number": {
               "value": particlesNumber,
